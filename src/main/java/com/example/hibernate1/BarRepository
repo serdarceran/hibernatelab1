@@ -1,0 +1,15 @@
+package com.example.hibernate1;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.example.hibernate1.model.Bar;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface BarRepository extends CrudRepository<Bar, String> {
+
+    List<Bar> findByName(String name);
+
+    Optional<Bar> findById(String id);
+  }
